@@ -4,7 +4,7 @@ from cassiopeia.type.core.common import LoadPolicy, StatSummaryType
 from discord.ext import commands
 
 riotapi.set_region("EUW")
-riotapi.set_api_key("RGAPI-423fb003-e22b-4064-b4a5-eb091e47a07c")
+riotapi.set_api_key("API-TOKEN")
 
 class LOL():
     def __init__(self, bot):
