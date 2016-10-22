@@ -54,4 +54,4 @@ async def iq():
 
 
 
-bot.run('MjE1MjA4MzU2NjkwOTE5NDI0.CrblxQ.4gP1i71BwgSv0z9ld1yOSAVRe9E')
+bot.run('API-TOKEN')
