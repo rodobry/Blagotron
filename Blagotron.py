@@ -133,3 +133,7 @@ async def on_message(message):
     await bot.process_commands(message)
 bot.run('MjE1MjA4MzU2NjkwOTE5NDI0.CrblxQ.4gP1i71BwgSv0z9ld1yOSAVRe9E')
 
+<<<<<<< HEAD
+=======
+bot.run('API-TOKEN')
+>>>>>>> origin/master
