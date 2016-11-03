@@ -11,7 +11,7 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 
 #specify which extensions load when the bot starts up
-startup_extensions = ["rng", "joke", "lol", "hearthstone"]
+startup_extensions = ["rng", "joke", "lol", "hearthstone", "searches"]
 
 #Bot description
 description = '''Blagotron is a bot used in private discord server'''
@@ -131,9 +131,5 @@ async def on_message(message):
         await bot.send_message(message.channel, keyWords[message.content.lower()])
 
     await bot.process_commands(message)
-bot.run('MjE1MjA4MzU2NjkwOTE5NDI0.CrblxQ.4gP1i71BwgSv0z9ld1yOSAVRe9E')
 
-<<<<<<< HEAD
-=======
-bot.run('API-TOKEN')
->>>>>>> origin/master
+bot.run('MjE1MjA4MzU2NjkwOTE5NDI0.CrblxQ.4gP1i71BwgSv0z9ld1yOSAVRe9E')
