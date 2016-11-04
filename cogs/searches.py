@@ -3,7 +3,7 @@ import wikipedia
 import json
 
 try:
-    config = json.load(open('config.json'))
+    config = json.load(open('data/config.json'))
 except Exception as e:
     config = {}
 

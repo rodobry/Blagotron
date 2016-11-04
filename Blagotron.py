@@ -5,7 +5,7 @@ from discord.ext import commands
 import logging
 
 try:
-    config = json.load(open('config.json'))
+    config = json.load(open('data/config.json'))
 except Exception as e:
     config = {}
 
@@ -16,7 +16,7 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 
 #specify which extensions load when the bot starts up
-startup_extensions = ["rng", "joke", "lol", "hearthstone", "searches", "trivia"]
+startup_extensions = ["cogs.rng", "cogs.joke", "cogs.lol", "cogs.hearthstone", "cogs.searches"]
 
 #Bot description
 description = '''Blagotron is a bot used in private discord server'''
@@ -25,7 +25,7 @@ description = '''Blagotron is a bot used in private discord server'''
 bot = commands.Bot(command_prefix='/', description=description)
 
 try:
-    keyWords = json.load(open('keyWords.json'))
+    keyWords = json.load(open('data/keyWords.json'))
 except Exception as e:
     keyWords = {}
 
@@ -97,7 +97,7 @@ async def add_keyword(*args):
     keyphrase = args[:index]
     response = args[index+1:]
     keyWords.update({(' '.join(keyphrase)).lower():' '.join(response)})
-    with open('keyWords.json', 'w') as fp:
+    with open('data/keyWords.json', 'w') as fp:
         json.dump(keyWords, fp,indent=4)
     await bot.say("Added key '{}' with response '{}'".format((' '.join(keyphrase)).lower(),' '.join(response)))
 
@@ -125,7 +125,7 @@ async def remove_keyword(*args):
     except KeyError as e:
         await bot.say("'{}' not in list of keywords".format(keyphrase))
     else:
-        with open('keyWords.json', 'w') as fp:
+        with open('data/keyWords.json', 'w') as fp:
             json.dump(keyWords, fp,indent=4)
         await bot.say("removed: " + keyphrase)
 
