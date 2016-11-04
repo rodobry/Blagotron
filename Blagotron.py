@@ -4,6 +4,11 @@ import json
 from discord.ext import commands
 import logging
 
+try:
+    config = json.load(open('config.json'))
+except Exception as e:
+    config = {}
+
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
@@ -11,7 +16,7 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 
 #specify which extensions load when the bot starts up
-startup_extensions = ["rng", "joke", "lol", "hearthstone", "searches"]
+startup_extensions = ["rng", "joke", "lol", "hearthstone", "searches", "trivia"]
 
 #Bot description
 description = '''Blagotron is a bot used in private discord server'''
@@ -36,6 +41,7 @@ async def on_ready():
     print(bot.user.id)
     print("Discord version : {}".format(discord.__version__))
     print('------')
+    await bot.change_presence(game=discord.Game(name='Half Life 3'))
 
     for extension in startup_extensions:
         try:
@@ -132,4 +138,4 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
-bot.run('MjE1MjA4MzU2NjkwOTE5NDI0.CrblxQ.4gP1i71BwgSv0z9ld1yOSAVRe9E')
+bot.run(config["discord-token"])

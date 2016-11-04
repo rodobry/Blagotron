@@ -1,5 +1,13 @@
 from discord.ext import commands
 import wikipedia
+import json
+
+try:
+    config = json.load(open('config.json'))
+except Exception as e:
+    config = {}
+
+wikipedia.set_lang(config["wikilang"])
 
 class Searches():
     def __init__(self, bot):
@@ -9,8 +17,8 @@ class Searches():
     async def wikisearch(self, *, q: str):
         """Returns a list of wikipedia articles related search term"""
         search_results = wikipedia.search(q)
-        # limit bot results to 5 to avoid long messages
-        msg = "\n".join(search_results[:5])
+        # limit bot results to 10 to avoid long messages
+        msg = "\n".join(search_results[:10])
         await self.bot.say(msg)
 
     @commands.command()

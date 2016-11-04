@@ -2,9 +2,14 @@ import random
 from cassiopeia import riotapi
 from cassiopeia.type.core.common import LoadPolicy, StatSummaryType
 from discord.ext import commands
+import json
+try:
+    config = json.load(open('config.json'))
+except Exception as e:
+    config = {}
 
-riotapi.set_region("EUW")
-riotapi.set_api_key("API-TOKEN")
+riotapi.set_region(config["riot-region"])
+riotapi.set_api_key(config["riot-api"])
 
 class LOL():
     def __init__(self, bot):
