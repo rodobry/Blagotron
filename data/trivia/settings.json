@@ -1,0 +1,6 @@
+{
+    "TRIVIA_BOT_PLAYS" : true,
+    "TRIVIA_DELAY" : 15,
+    "TRIVIA_MAX_SCORE" : 10,
+    "TRIVIA_TIMEOUT" : 120
+}

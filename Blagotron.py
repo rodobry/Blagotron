@@ -1,5 +1,6 @@
 import discord
 import asyncio
+import json
 from discord.ext import commands
 import logging
 import Checker
@@ -17,7 +18,7 @@ handler = logging.FileHandler(filename='Discord.log', encoding='utf-8', mode='w'
 log.addHandler(handler)
 
 #specify which extensions load when the bot starts up
-startup_extensions = ["cogs.rng", "cogs.joke", "cogs.lol", "cogs.hearthstone", "cogs.searches"]
+startup_extensions = ["cogs.rng", "cogs.joke", "cogs.lol", "cogs.hearthstone", "cogs.searches", "cogs.trivia"]
 
 #Bot description
 description = '''Blagotron is a bot used in private discord server'''
