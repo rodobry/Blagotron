@@ -1,6 +1,11 @@
 from discord.ext import commands
 import discord.utils
 
+#
+# This is a modified version of checks.py, originally made by Rapptz
+#
+#                 https://github.com/Rapptz
+
 def is_owner_check(message):
     return message.author.id == '132914536700182528'
 
@@ -9,8 +14,9 @@ def is_owner():
 
 def is_mod_or_admin():
     def predicate(ctx):
-        return check_roles(ctx, lambda r: r.name in ('Blagosbire', 'Admin'))
-    return commands.check(predicate)
+        return check_roles(ctx, lambda r: r.name in ('Blagosbire', 'Admin')) # Blagosbire & Admin are the
+    return commands.check(predicate)                                         # 2 roles that can control the bot
+                                                                             # When there is no permission check
 
 
 def check_roles(ctx, check):
