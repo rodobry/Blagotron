@@ -1,12 +1,8 @@
 from discord.ext import commands
 import wikipedia
-import json
+from dataIO import dataIO
 
-try:
-    config = json.load(open('data/config.json'))
-except Exception as e:
-    config = {}
-
+config = dataIO.load_json('data/config.json')
 wikipedia.set_lang(config["wikilang"])
 
 class Searches():

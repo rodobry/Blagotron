@@ -1,22 +1,20 @@
 import discord
 import asyncio
-import json
 from discord.ext import commands
 import logging
-import checker
+import Checker
+from dataIO import dataIO
 
 #Load the config file
-try:
-    config = json.load(open('data/config.json'))
-except Exception as e:
-    config = {}
+config = dataIO.load_json('data/config.json')
 
 #Generate a log file
-logger = logging.getLogger('discord')
-logger.setLevel(logging.DEBUG)
-handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
-handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
-logger.addHandler(handler)
+discord_logger = logging.getLogger('discord')
+discord_logger.setLevel(logging.CRITICAL)
+log = logging.getLogger()
+log.setLevel(logging.INFO)
+handler = logging.FileHandler(filename='Discord.log', encoding='utf-8', mode='w')
+log.addHandler(handler)
 
 #specify which extensions load when the bot starts up
 startup_extensions = ["cogs.rng", "cogs.joke", "cogs.lol", "cogs.hearthstone", "cogs.searches"]
@@ -28,10 +26,7 @@ description = '''Blagotron is a bot used in private discord server'''
 bot = commands.Bot(command_prefix='/', description=description)
 
 #Load the keywords file
-try:
-    keyWords = json.load(open('data/keyWords.json'))
-except Exception as e:
-    keyWords = {}
+keyWords = dataIO.load_json('data/keyWords.json')
 
 @bot.event
 async def on_ready():
@@ -61,7 +56,7 @@ async def load(extension_name : str):
 
 
 @bot.command(hidden=True)
-@checker.is_owner()
+@Checker.is_owner()
 async def shutdown():
     await bot.say(":robot: sHuTtInG dOwN :robot: ")
     await bot.close()
@@ -83,7 +78,7 @@ async def say(*args):
     await bot.say(msg)
 
 @bot.command(no_pm=True)
-@checker.is_mod_or_admin()
+@Checker.is_mod_or_admin()
 async def add_keyword(*args):
     """adds keyphrase/response to be checked
        parameters should be add_keyword <string of words> : <response of words>
@@ -101,7 +96,7 @@ async def add_keyword(*args):
     await bot.say("Added key '{}' with response '{}'".format((' '.join(keyphrase)).lower(),' '.join(response)))
 
 @bot.command()
-@checker.is_mod_or_admin()
+@Checker.is_mod_or_admin()
 async def list_keywords():
     msg = "keys:"
     i = 0
@@ -115,7 +110,7 @@ async def list_keywords():
 
 
 @bot.command(no_pm=True)
-@checker.is_mod_or_admin()
+@Checker.is_mod_or_admin()
 async def remove_keyword(*args):
     """removes keyword phrase from keywords"""
     keyphrase = (' '.join(args)).lower()
