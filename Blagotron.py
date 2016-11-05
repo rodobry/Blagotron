@@ -3,12 +3,15 @@ import asyncio
 import json
 from discord.ext import commands
 import logging
+import checker
 
+#Load the config file
 try:
     config = json.load(open('data/config.json'))
 except Exception as e:
     config = {}
 
+#Generate a log file
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
@@ -24,15 +27,11 @@ description = '''Blagotron is a bot used in private discord server'''
 #Prefix of the commands to call the bot
 bot = commands.Bot(command_prefix='/', description=description)
 
+#Load the keywords file
 try:
     keyWords = json.load(open('data/keyWords.json'))
 except Exception as e:
     keyWords = {}
-
-def is_owner_check(message):
-    return message.author.id == '132914536700182528'
-def is_owner():
-    return commands.check(lambda ctx: is_owner_check(ctx.message))
 
 @bot.event
 async def on_ready():
@@ -62,7 +61,7 @@ async def load(extension_name : str):
 
 
 @bot.command(hidden=True)
-@is_owner()
+@checker.is_owner()
 async def shutdown():
     await bot.say(":robot: sHuTtInG dOwN :robot: ")
     await bot.close()
@@ -84,7 +83,7 @@ async def say(*args):
     await bot.say(msg)
 
 @bot.command(no_pm=True)
-@is_owner()
+@checker.is_mod_or_admin()
 async def add_keyword(*args):
     """adds keyphrase/response to be checked
        parameters should be add_keyword <string of words> : <response of words>
@@ -102,7 +101,7 @@ async def add_keyword(*args):
     await bot.say("Added key '{}' with response '{}'".format((' '.join(keyphrase)).lower(),' '.join(response)))
 
 @bot.command()
-@is_owner()
+@checker.is_mod_or_admin()
 async def list_keywords():
     msg = "keys:"
     i = 0
@@ -116,7 +115,7 @@ async def list_keywords():
 
 
 @bot.command(no_pm=True)
-@is_owner()
+@checker.is_mod_or_admin()
 async def remove_keyword(*args):
     """removes keyword phrase from keywords"""
     keyphrase = (' '.join(args)).lower()
