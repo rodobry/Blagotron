@@ -1,0 +1,195 @@
+Quelle est la capitale de l'Albanie ?`Tirana
+Quelle est la capitale de l'Allemagne?`Berlin
+Quelle est la capitale de l'Andorre ?`Andorre-la-Vieille
+Quelle est la capitale de l'Autriche ?`Vienne
+Quelle est la capitale de la Belgique ?`Bruxelles
+Quelle est la capitale de la Biélorussie ?`Minsk
+Quelle est la capitale de la Bosnie-Herzégovine?`Sarajevo
+Quelle est la capitale de la Bulgarie ?`Sofia
+Quelle est la capitale de la Chypre ?`Nicosie
+Quelle est la capitale de la Croatie ?`Zagreb
+Quelle est la capitale du Danemark ?`Copenhague
+Quelle est la capitale de l'Espagne	?`Madrid
+Quelle est la capitale de l'Estonie	?`Tallinn
+Quelle est la capitale de la Finlande ?`Helsinki
+Quelle est la capitale de la France	?`Paris
+Quelle est la capitale de la Grèce ?`Athènes
+Quelle est la capitale de la Hongrie ?`Budapest
+Quelle est la capitale de l'Irlande	?`Dublin
+Quelle est la capitale de l'Islande	?`Reykjavík
+Quelle est la capitale de l'Italie ?`Rome
+Quelle est la capitale du Kosovo	?`Pristina
+Quelle est la capitale de la Lettonie ?`Riga
+Quelle est la capitale du Liechtenstein ?`Vaduz
+Quelle est la capitale de la Lituanie ?`Vilnius
+Quelle est la capitale du Luxembourg	?`Luxembourg
+Quelle est la capitale de la Macédoine ?`Skopje
+Quelle est la capitale de Malte ?`La Valette
+Quelle est la capitale de la Moldavie ?`Chisinau
+Quelle est la capitale de Monaco	?`Monaco
+Quelle est la capitale du Monténégro	?`odgorica
+Quelle est la capitale de la Norvège ?`Oslo
+Quelle est la capitale des Pays-Bas ?`Amsterdam
+Quelle est la capitale de la Pologne ?`Varsovie
+Quelle est la capitale du Portugal ?`Lisbonne
+Quelle est la capitale de la République Tchèque	?`Prague
+Quelle est la capitale de la Roumanie ?`Bucarest
+Quelle est la capitale du Royaume-Uni ?`Londres
+Quelle est la capitale de la Russie ?`Moscou
+Quelle est la capitale de Saint-Marin ?`Saint-Marin
+Quelle est la capitale de la Serbie	?`Belgrade
+Quelle est la capitale de la Slovaquie ?`Bratislava
+Quelle est la capitale de la Slovénie ?`Ljubljana
+Quelle est la capitale de la Suède ?`Stockholm
+Quelle est la capitale de la Suisse	?`Berne
+Quelle est la capitale de l'Ukraine	?`Kiev
+Quelle est la capitale du Vatican ?`Vatican
+Quelle est la capitale de l'Afghanistan	?`Kaboul
+Quelle est la capitale de l'Arabie Saoudite	?`Riyad
+Quelle est la capitale de l'Arménie	?`Erevan
+Quelle est la capitale de l'Azerbaïdjan	?`Bakou
+Quelle est la capitale de Bahreïn ?`Manama
+Quelle est la capitale du Bangladesh	?`Dacca
+Quelle est la capitale du Bhoutan ?`Thimbu
+Quelle est la capitale de la Birmanie ?`Naypyidaw
+Quelle est la capitale de Brunei ?`Bandar Seri Begawan
+Quelle est la capitale du Cambodge ?`Phnom Penh
+Quelle est la capitale de la Chine ?`Pékin
+Quelle est la capitale de la Corée du Nord ?`Pyongyang
+Quelle est la capitale de la Corée du Sud ?`Séoul
+Quelle est la capitale des Emirats Arabes Unis	?`Abu Dhabi
+Quelle est la capitale de la Géorgie ?`Tbilissi
+Quelle est la capitale de l'Inde ?`New Delhi
+Quelle est la capitale de l'Indonésie ?`Jakarta
+Quelle est la capitale de l'Irak ?`Bagdad
+Quelle est la capitale de l'Iran ?`Téhéran
+Quelle est la capitale de l'Israël ?`Jérusalem
+Quelle est la capitale du Japon ?`Tokyo
+Quelle est la capitale de la Jordanie ?`Amman
+Quelle est la capitale du Kazakhstan	?`Astana
+Quelle est la capitale du Kirghizistan ?`Bichkek
+Quelle est la capitale du Koweït	?`Koweït
+Quelle est la capitale du Laos ?`Vientiane
+Quelle est la capitale du Liban ?`Beyrouth
+Quelle est la capitale de la Malaisie ?`Kuala Lumpur
+Quelle est la capitale des Maldives ?`Malé
+Quelle est la capitale de la Mongolie ?`Oulan-Bator
+Quelle est la capitale du Népal ?`Katmandou
+Quelle est la capitale de Oman ?`Mascate
+Quelle est la capitale de l'Ouzbékistan ?`Tachkent
+Quelle est la capitale du Pakistan ?`Islamabad
+Quelle est la capitale des Philippines ?`Manille
+Quelle est la capitale du Qatar ?`Doha
+Quelle est la capitale de Singapour ?`Singapour
+Quelle est la capitale du Sri Lanka	?`Sri Jayawardenapura
+Quelle est la capitale de la Syrie ?`Damas
+Quelle est la capitale du Tadjikistan ?`Douchanbe
+Quelle est la capitale de Taïwan?`Taipei
+Quelle est la capitale de la Thaïlande ?`Bangkok
+Quelle est la capitale de la Timor-Oriental	?`Dili
+Quelle est la capitale du Turkménistan ?`Achgabat
+Quelle est la capitale de la Turquie ?`Ankara
+Quelle est la capitale du Viêt Nam ?`Hanoi
+Quelle est la capitale du Yémen	?`Sanaa
+Quelle est la capitale de l'Afrique du Sud	?`Pretoria
+Quelle est la capitale de l'Algérie	?`Alger
+Quelle est la capitale de l'Angola	?`Luanda
+Quelle est la capitale du Bénin	?`Porto-Novo
+Quelle est la capitale du Botswana ?`Gaborone
+Quelle est la capitale du Burkina Faso ?`Ouagadougou
+Quelle est la capitale du Burundi ?`Bujumbura
+Quelle est la capitale du Cameroun ?`Yaoundé
+Quelle est la capitale de Cap-Vert ?`Praia
+Quelle est la capitale des Comores ?`Moroni
+Quelle est la capitale du Congo ?`Brazzaville
+Quelle est la capitale de la Côte d'Ivoire ?`Yamoussoukro
+Quelle est la capitale de Djibouti ?`Djibouti
+Quelle est la capitale de l'Egypte ?`Le Caire
+Quelle est la capitale de l'Erythrée ?`Asmara
+Quelle est la capitale de l'Ethiopie ?`Addis-Abeba
+Quelle est la capitale du Gabon	?`Libreville
+Quelle est la capitale de la Gambie	?`Banjul
+Quelle est la capitale du Ghana	?`Accra
+Quelle est la capitale de la Guinée	?`Conakry
+Quelle est la capitale de la Guinée équatoriale	?`Malabo
+Quelle est la capitale de la Guinée-Bissau ?`Bissau
+Quelle est la capitale de l'île Maurice	?`Port Louis
+Quelle est la capitale du Kenya	?`Nairobi
+Quelle est la capitale de Lesotho ?`Maseru
+Quelle est la capitale du Liberia ?`Monrovia
+Quelle est la capitale de la Libye	?`Tripoli
+Quelle est la capitale du Madagascar	?`Antananarivo
+Quelle est la capitale du Malawi	?`Lilongwe
+Quelle est la capitale du Mali ?`Bamako
+Quelle est la capitale du Maroc ?`Rabat
+Quelle est la capitale de la Mauritanie	?`Nouakchott
+Quelle est la capitale de la Mozambique	?`Maputo
+Quelle est la capitale de la Namibie ?`Windhoek
+Quelle est la capitale du Niger	?`Niamey
+Quelle est la capitale du Nigeria ?`Abuja
+Quelle est la capitale de l'Ouganda	?`Kampala
+Quelle est la capitale de la République Centrafricaine	?`Bangui
+Quelle est la capitale de la République Démocratique du Congo ?`Kinshasa
+Quelle est la capitale du Rwanda	?`Kigali
+Quelle est la capitale de São Tomé et Príncipe ?`São Tomé
+Quelle est la capitale du Sénégal ?`Dakar
+Quelle est la capitale des Seychelles ?`Victoria
+Quelle est la capitale de la Sierra Leone ?`Freetown
+Quelle est la capitale de la Somalie ?`Mogadiscio
+Quelle est la capitale du Soudan	?`Khartoum
+Quelle est la capitale de la Swaziland ?`Mbabane
+Quelle est la capitale de la Tanzanie ?`Dodoma
+Quelle est la capitale du Tchad ?`N'Djamena
+Quelle est la capitale du Togo ?`Lomé
+Quelle est la capitale de la Tunisie ?`Tunis
+Quelle est la capitale de la Zambie	?`Lusaka
+Quelle est la capitale du Zimbabwe ?`Harare
+Quelle est la capitale de l'Antigua-et-Barbuda ?`Saint John's
+Quelle est la capitale de l'Argentine ?`Buenos Aires
+Quelle est la capitale des Bahamas ?`Nassau
+Quelle est la capitale de la Barbade ?`Bridgetown
+Quelle est la capitale de la Belize	?`Belmopan
+Quelle est la capitale de la Bolivie ?`Sucre
+Quelle est la capitale du Brésil	?`Brasilia
+Quelle est la capitale du Canada	?`Ottawa
+Quelle est la capitale du Chili	?`Santiago
+Quelle est la capitale de la Colombie ?`Bogota
+Quelle est la capitale de la Costa Rica	?`San José
+Quelle est la capitale de Cuba ?`La Havane
+Quelle est la capitale de la République Dominicaine	?`Saint-Domingue
+Quelle est la capitale de la Dominique	?`Roseau
+Quelle est la capitale de l'Équateur	?`Quito
+Quelle est la capitale de l'Etats-Unis	?`Washington
+Quelle est la capitale de Grenade	?`Saint George's
+Quelle est la capitale du Guatemala	?`Guatemala
+Quelle est la capitale de la Guyana	?`Georgetown
+Quelle est la capitale de l'Haïti	?`Port-au-Prince
+Quelle est la capitale de l'Honduras	?`Tegucigalpa
+Quelle est la capitale de la Jamaïque	?`Kingston
+Quelle est la capitale du Mexique ?`Mexico
+Quelle est la capitale du Nicaragua	?`Managua
+Quelle est la capitale du Panama ?`Panama
+Quelle est la capitale du Paraguay ?`Asunción
+Quelle est la capitale du Pérou	?`Lima
+Quelle est la capitale de Saint-Kitts-et-Nevis ?`Basseterre
+Quelle est la capitale de Saint-Vincent-et-les-Grenadines ?`Kingstown
+Quelle est la capitale de Sainte-Lucie	?`Castries
+Quelle est la capitale de la Salvador	?`San Salvador
+Quelle est la capitale de la Suriname	?`Paramaribo
+Quelle est la capitale de Trinité-et-Tobago ?`Port of Spain
+Quelle est la capitale de l'Uruguay	?`Montevideo
+Quelle est la capitale du Venezuela	?`Caracas
+Quelle est la capitale de l'Australie?`Canberra
+Quelle est la capitale de Fidji ?`Suva
+Quelle est la capitale de Kiribati	?`Tarawa
+Quelle est la capitale de Marshall	?`Majuro
+Quelle est la capitale de la Micronésie	?`Palikir
+Quelle est la capitale de Nauru	?`Yaren
+Quelle est la capitale de la Nouvelle-Zélande	?`Wellington
+Quelle est la capitale de Palaos	?`Melekeok
+Quelle est la capitale de la Papouasie-Nouvelle-Guinée	?`Port Moresby
+Quelle est la capitale de Salomon ?`Honiara
+Quelle est la capitale de la Samoa	?`Apia
+Quelle est la capitale de la Tonga	?`Nukualofa
+Quelle est la capitale de Tuvalu	?`Fanafuti
+Quelle est la capitale de Vanuatu ?`Port-Vila

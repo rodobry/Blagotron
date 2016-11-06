@@ -50,7 +50,7 @@ class Trivia:
 
     @triviaset.command()
     async def botplays(self):
-        """Red gains points"""
+        """Blagotron gains points"""
         if self.settings["TRIVIA_BOT_PLAYS"] is True:
             self.settings["TRIVIA_BOT_PLAYS"] = False
             await self.bot.say("Alright, I won't embarass you at trivia anymore.")
@@ -152,7 +152,7 @@ class TriviaSession():
         trivia_manager.trivia_sessions.remove(self)
 
     async def load_list(self, qlist):
-        with open(qlist, "r", encoding="ISO-8859-1") as f:
+        with open(qlist, "r", encoding="UTF-8") as f:
             qlist = f.readlines()
         parsed_list = []
         for line in qlist:
