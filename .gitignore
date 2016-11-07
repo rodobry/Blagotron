@@ -8,3 +8,7 @@
 *.log
 
 config.json
+
+data/trivia/test2.txt
+
+data/trivia/test3.txt
