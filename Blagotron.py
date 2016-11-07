@@ -5,7 +5,7 @@ from discord.ext import commands
 import logging
 import Checker
 from dataIO import dataIO
-
+import re
 #Load the config file
 config = dataIO.load_json('data/config.json')
 
@@ -128,8 +128,13 @@ async def remove_keyword(*args):
 async def on_message(message):
     if message.author == bot.user:
         return
-    if message.content.lower() in keyWords:
-        await bot.send_message(message.channel, keyWords[message.content.lower()])
+    msgtest = message.content.lower()
+    for a in keyWords:
+        regex = re.escape(a)
+        if re.search(regex, msgtest):
+            match = re.search(regex, msgtest)
+            matchsplit = match.group()
+            await bot.send_message(message.channel, keyWords[matchsplit])
 
     await bot.process_commands(message)
 
