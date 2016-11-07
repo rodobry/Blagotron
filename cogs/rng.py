@@ -29,25 +29,25 @@ class RNG():
         """Rock paper scissors. Example : /rps Rock if you want to use the rock."""
         print('Petit pierre feuille ciseaux OKLM')
         # Les options possibles
-        t = ["Rock", "Paper", "Scissors"]
+        t = ["rock", "paper", "scissors"]
         # random choix pour le bot
         computer = t[randint(0, 2)]
-        player = msg
+        player = msg.lower()
         print(msg)
         if player == computer:
             await self.bot.say("Tie!")
-        elif player == "Rock":
-            if computer == "Paper":
+        elif player == "rock":
+            if computer == "paper":
                 await self.bot.say("You lose! {0} covers {1}".format(computer, player))
             else:
                 await self.bot.say("You win! {0} smashes {1}".format(player, computer))
-        elif player == "Paper":
-            if computer == "Scissors":
+        elif player == "paper":
+            if computer == "scissors":
                 await self.bot.say("You lose! {0} cut {1}".format(computer, player))
             else:
                 await self.bot.say("You win! {0} covers {1}".format(player, computer))
-        elif player == "Scissors":
-            if computer == "Rock":
+        elif player == "scissors":
+            if computer == "rock":
                 await self.bot.say("You lose! {0} smashes {1}".format(computer, player))
             else:
                 await self.bot.say("You win! {0} cut {1}".format(player, computer))
