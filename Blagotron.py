@@ -1,11 +1,13 @@
 import discord
 import asyncio
+import os
 import json
 from discord.ext import commands
-import logging
-import Checker
 from dataIO import dataIO
+import Checker
+import logging
 import re
+
 #Load the config file
 config = dataIO.load_json('data/config.json')
 
@@ -26,7 +28,14 @@ description = '''Blagotron is a bot used in private discord server'''
 #Prefix of the commands to call the bot
 bot = commands.Bot(command_prefix='/', description=description)
 
+def check_files():
+    if not os.path.isfile("data/keyWords.json"):
+        test = {}
+        print("Creating empty keyWords.json...")
+        dataIO.save_json("data/keyWords.json",test)
+
 #Load the keywords file
+check_files()
 keyWords = dataIO.load_json('data/keyWords.json')
 
 @bot.event
@@ -37,7 +46,6 @@ async def on_ready():
     print("Discord version : {}".format(discord.__version__))
     print('------')
     await bot.change_presence(game=discord.Game(name='Half Life 3'))
-
     for extension in startup_extensions:
         try:
             bot.load_extension(extension)
