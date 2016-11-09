@@ -76,7 +76,7 @@ class Trivia:
             else:
                 await self.bot.say("There's no trivia session ongoing in this channel.")
         elif not await get_trivia_by_channel(message.channel):
-            t = TriviaSession(message, self.settings)
+            t = TriviaSession(message, self.settings, self.bot)
             self.trivia_sessions.append(t)
             await t.load_questions(message.content)
         else:
@@ -108,7 +108,7 @@ class Trivia:
             await self.bot.say("There are no trivia lists available.")
 
 class TriviaSession():
-    def __init__(self, message, settings):
+    def __init__(self, message, settings, bot):
         self.gave_answer = ["I know this one! {}!", "Easy: {}.", "Oh really? It's {} of course."]
         self.current_q = None # {"QUESTION" : "String", "ANSWERS" : []}
         self.question_list = ""
@@ -118,6 +118,7 @@ class TriviaSession():
         self.timer = None
         self.count = 0
         self.settings = settings
+        self.bot = bot
 
     async def load_questions(self, msg):
         msg = msg.split(" ")
@@ -241,7 +242,9 @@ class TriviaSession():
                         self.current_q["ANSWERS"] = []
                         self.status = "correct answer"
                         self.add_point(message.author.name)
-                        msg = "You got it {}! **+1** to you!".format(message.author.name)
+                        economy = self.bot.get_cog('Economy').bank
+                        msg = "You got it {}! **+1** and **10 credits** to you !".format(message.author.name)
+                        economy.deposit_credits(message.author, 10)
                         try:
                             await trivia_manager.bot.send_typing(self.channel)
                             await trivia_manager.bot.send_message(message.channel, msg)
