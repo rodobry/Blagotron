@@ -20,7 +20,7 @@ handler = logging.FileHandler(filename='Discord.log', encoding='utf-8', mode='w'
 log.addHandler(handler)
 
 #specify which extensions load when the bot starts up
-startup_extensions = ["cogs.rng", "cogs.joke", "cogs.lol", "cogs.hearthstone", "cogs.searches", "cogs.trivia"]
+startup_extensions = ["cogs.rng", "cogs.joke", "cogs.lol", "cogs.hearthstone", "cogs.searches", "cogs.trivia", "cogs.remindme"]
 
 #Bot description
 description = '''Blagotron is a bot used in private discord server'''
@@ -28,6 +28,7 @@ description = '''Blagotron is a bot used in private discord server'''
 #Prefix of the commands to call the bot
 bot = commands.Bot(command_prefix='/', description=description)
 
+#Check if the Keywords file exists, if not create it
 def check_files():
     if not os.path.isfile("data/keyWords.json"):
         test = {}
@@ -45,7 +46,7 @@ async def on_ready():
     print(bot.user.id)
     print("Discord version : {}".format(discord.__version__))
     print('------')
-    await bot.change_presence(game=discord.Game(name='Half Life 3'))
+    await bot.change_presence(game=discord.Game(name=config["botgame"]))
     for extension in startup_extensions:
         try:
             bot.load_extension(extension)
@@ -131,6 +132,15 @@ async def remove_keyword(*args):
         with open('data/keyWords.json', 'w') as fp:
             json.dump(keyWords, fp,indent=4)
         await bot.say("removed: " + keyphrase)
+
+@bot.command(name='setgame', description='Sets current game. Usage: setgame game', pass_context=True, no_pm=True)
+@Checker.is_mod_or_admin()
+async def setgame(ctx, status: str):
+    """Set the game played by the bot"""
+    await bot.change_presence(game=discord.Game(name=status))
+    await bot.say("Game set to : **" + status + "**")
+    config["botgame"] = status
+    dataIO.save_json("data/config.json", config)
 
 @bot.event
 async def on_message(message):

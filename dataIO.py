@@ -52,6 +52,18 @@ class DataIO():
                 separators=(',',' : '))
         return data
 
+    def _legacy_fileio(self, filename, IO, data=None):
+        """Old fileIO provided for backwards compatibility"""
+        if IO == "save" and data != None:
+            return self.save_json(filename, data)
+        elif IO == "load" and data == None:
+            return self.load_json(filename)
+        elif IO == "check" and data == None:
+            return self.is_valid_json(filename)
+        else:
+            raise InvalidFileIO("FileIO was called with invalid"
+                                " parameters")
+
 def get_value(filename, key):
     with open(filename, encoding='utf-8', mode="r") as f:
         data = json.load(f)
@@ -64,3 +76,4 @@ def set_value(filename, key, value):
     return True
 
 dataIO = DataIO()
+fileIO = dataIO._legacy_fileio # backwards compatibility
