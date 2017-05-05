@@ -22,7 +22,7 @@ class Joke():
             "Ta mère est tellement moche que quand elle va à la banque ils coupent les caméras.",
             "Ta mère est tellement grosse que quand elle met des talons aiguilles, elle trouve du pétrole !",
             "Ta mère est tellement petite que sa tête pue des pieds.",
-            "Ta mère est tellement veille quel fait du lait en poudre.",
+            "Ta mère est tellement vieille qu'elle fait du lait en poudre.",
             "Ta mère a tellement mauvaise haleine qu'on a l'impression qu'elle a l'anus derrière les dents.",
             "Si tu vois un bateau qui flotte sur l'eau c'est que ta mère n'est pas à bord.",
             "Ta mère est tellement grosse que lorsqu'elle tombe du lit elle tombe des deux bords.",

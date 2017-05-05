@@ -108,6 +108,7 @@ class Russianroulette:
 
     @commands.command(pass_context=True, no_pm=True)
     @Checker.admin_or_permissions(manage_server=True)
+    
     async def russianset(self, ctx, bet: int):
         """Set the initial starting bet to play the game"""
         if bet > 0:

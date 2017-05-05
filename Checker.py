@@ -27,6 +27,11 @@ def check_roles(ctx, check):
     role = discord.utils.find(check, author.roles)
     return role
 
+#def is_777_channel_check(message):
+    #return message.channel.id == '245849763008741387'
+
+#def is_777_channel():
+    #return commands.check(lambda ctx: is_777_channel_check(ctx.message))
 
 # The permission system of the bot is based on a "just works" basis
 # You have permissions and the bot has permissions. If you meet the permissions

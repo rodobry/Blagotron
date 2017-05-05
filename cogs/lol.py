@@ -29,7 +29,7 @@ class LOL():
 
         match_list = summoner.match_list()
 
-        num_matches = 10
+        num_matches = 5
         kills = 0
         deaths = 0
         assists = 0
