@@ -1,0 +1,4 @@
+discord.py
+cassiopeia
+bs4
+wikipedia
