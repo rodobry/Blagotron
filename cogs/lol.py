@@ -1,6 +1,6 @@
 import random
-from cassiopeia import riotapi
-from cassiopeia.type.core.common import LoadPolicy, StatSummaryType
+import cassiopeia as cass
+from cassiopeia import Champion, Champions, Summoner, ChampionMastery
 from discord.ext import commands
 import json
 try:
@@ -8,44 +8,28 @@ try:
 except Exception as e:
     config = {}
 
-riotapi.set_region(config["riot-region"])
-riotapi.set_api_key(config["riot-api"])
-
 class LOL():
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
-    async def randchamp(self):
-        """Get a random LoL champion"""
-        champions = riotapi.get_champions()
-        random_champion = random.choice(champions)
-        await self.bot.say(random_champion)
+    @commands.command(pass_context=True)
+    async def summinfo(self, ctx, name : str, region : str):
+        """Get informations on a summoner"""
+        summoner = Summoner(name=name, region=region)
+        await self.bot.say("Name : {0}\n ID: {1}\n Account ID: {2}\n Level: {3}\n Profil icon : {4}".format(summoner.name,summoner.id,summoner.account.id,summoner.level,summoner.profile_icon.url))
 
     @commands.command(pass_context=True)
-    async def kda(self, ctx):
-        """Get the KdA of a summoner over his 20 last games"""
-        summoner = riotapi.get_summoner_by_name(ctx.message.content[5:])
-
-        match_list = summoner.match_list()
-
-        num_matches = 5
-        kills = 0
-        deaths = 0
-        assists = 0
-
-        await self.bot.say("Calculating K/D/A from the past {0} matches...".format(num_matches))
-
-        for i, match_reference in enumerate(match_list[0:num_matches]):
-            match = match_reference.match()
-            for participant in match.participants:
-                if participant.summoner_id == summoner.id:
-                    kills += participant.stats.kills
-                    deaths += participant.stats.deaths
-                    assists += participant.stats.assists
-            kda = (kills+assists)/deaths
-        await self.bot.say("Average K/D/A : {0}/{1}/{2} == {3} over past {4} matches".format(kills,deaths,assists, round(kda, 3),num_matches))
-
+    async def champmastery(self, ctx, name : str, region : str):
+        """Get champions masteries of a summoner"""
+        summoner = Summoner(name=name, region=region)
+        sid=summoner.id
+        summoner = Summoner(name=name,region=region,id=sid)
+        cms = cass.get_champion_masteries(summoner=summoner, region=region)
+        cms = summoner.champion_masteries
+        await self.bot.say("Highest mastery score : {}".format(cms[0].points))
+        pro = cms.filter(lambda cm: cm.level >= 5)
+        await self.bot.say("{} has mastery level 5 or higher on:".format(summoner.name))
+        await self.bot.say([cm.champion.name for cm in pro])
 
 def setup(bot):
     bot.add_cog(LOL(bot))
